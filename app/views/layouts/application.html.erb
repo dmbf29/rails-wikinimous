@@ -6,9 +6,37 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
+
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <a href="/" class="navbar-wagon-brand">
+    Wikinimous
+  </a>
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+    <!-- Search form -->
+    <form action="" class="navbar-wagon-search">
+      <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
+      <button type="submit" class="navbar-wagon-search-btn">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
+
+
+    <!-- Button (call-to-action) -->
+    <%= link_to "New Article", new_article_path, class: "navbar-wagon-item     navbar-wagon-button btn" %>
+  <!--   <a href="" class="navbar-wagon-item     navbar-wagon-button btn">New Article</a> -->
+  </div>
+</div>
+
+
+
     <%= yield %>
   </body>
 </html>
